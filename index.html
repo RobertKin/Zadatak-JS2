@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Program za obavljanje osnovnih aritmetickih operacija">
+    <meta name="author" content="Robert Firanji">
+    <title>Program za obavljanje osnovnih aritmetickih operacija</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #461212;
+        }
+
+        .box {
+            margin: 200px auto;
+            text-align: center;
+            opacity: 1;
+            width: 800px;
+            height: 600px;
+            color: #471111;
+            background-color: bisque;
+            border-radius: 10%;
+        }
+
+        h1 {
+            font-size: 6em;
+        }
+    </style>
+
+    <div class="box">
+        <h1 id="res">Rezultat racunske operacije je:</h1>
+        <div>
+            <form></form>
+        </div>
+    </div>
+
+    <script>
+
+        var a = prompt("Unesite prvi broj")
+        var b = prompt("Unesite racunsku operaciju: (+ - * /)")
+        var c = prompt("Unesite drugi broj")
+
+        switch (b) {
+            case ('+'):
+                b = parseInt(a) + parseInt(c)
+                break;
+            case ('-'):
+                b = a - c
+                break;
+            case ('*'):
+                b = a * c
+                break;
+            case ('/'):
+                b = a / c
+                break;
+            default:
+                document.write("Nepoznata vrednost")
+        }
+
+        alert("Rezultat racunske operacije je : " + b);
+        var x = document.getElementById("res");
+        x.innerHTML = "Rezultat racunske operacije je : " + b;
+
+    </script>
+
+</body>
+
+</html>
